@@ -447,3 +447,32 @@ body {
   align-items: center;
   gap: 8px;
 }
+
+.video-container {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: -2;
+}
+
+#yt-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120vw;
+  height: 120vh;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
