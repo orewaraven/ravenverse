@@ -502,3 +502,17 @@ html, body {
   inset: 0;
   background: rgba(0, 0, 0, 0.45);
 }
+
+#unmute-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+  padding: 10px 16px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #ff50cd;
+  color: #ff50cd;
+  cursor: pointer;
+  font-family: Inter, sans-serif;
+}
