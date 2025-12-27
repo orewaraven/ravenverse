@@ -32,3 +32,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+<script>
+  // This waits for the user to click anywhere on the page to start the music
+  document.addEventListener('click', function() {
+    var audio = document.getElementById("bgAudio");
+    audio.play();
+  }, { once: true }); // { once: true } ensures it only triggers on the first click
+</script>
