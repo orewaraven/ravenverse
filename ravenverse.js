@@ -31,19 +31,12 @@ document.addEventListener("DOMContentLoaded", () => {
     card.style.setProperty("--my", "50%");
   });
 });
-// This function starts the audio
-  function playAudio() {
-    const audio = document.getElementById("bgAudio");
-    audio.play().catch(error => {
-      console.log("Autoplay blocked, waiting for user interaction.");
-    });
-  }
 
-  // This triggers the audio on the VERY FIRST click anywhere on the page
-  document.addEventListener('click', playAudio, { once: true });
-  
-  // This also triggers it if they press a key or scroll
-  document.addEventListener('keydown', playAudio, { once: true });
-  document.addEventListener('touchstart', playAudio, { once: true });
+const btn = document.getElementById("unmute-btn");
+const video = document.getElementById("bgVideo");
 
-
+btn.addEventListener("click", () => {
+  video.muted = false;
+  video.volume = 0.7; // optional
+  btn.style.display = "none"; // hide button after click
+});
