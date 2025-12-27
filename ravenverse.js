@@ -31,9 +31,19 @@ document.addEventListener("DOMContentLoaded", () => {
     card.style.setProperty("--my", "50%");
   });
 });
-  // This waits for the user to click anywhere on the page to start the music
-  document.addEventListener('click', function() {
-    var audio = document.getElementById("bgAudio");
-    audio.play();
-  }, { once: true }); // { once: true } ensures it only triggers on the first click
+// This function starts the audio
+  function playAudio() {
+    const audio = document.getElementById("bgAudio");
+    audio.play().catch(error => {
+      console.log("Autoplay blocked, waiting for user interaction.");
+    });
+  }
+
+  // This triggers the audio on the VERY FIRST click anywhere on the page
+  document.addEventListener('click', playAudio, { once: true });
+  
+  // This also triggers it if they press a key or scroll
+  document.addEventListener('keydown', playAudio, { once: true });
+  document.addEventListener('touchstart', playAudio, { once: true });
+
 
