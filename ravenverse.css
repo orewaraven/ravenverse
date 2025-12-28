@@ -18,7 +18,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* IMPORTANT */
 }
 
 .content {
@@ -46,10 +45,8 @@
   border-radius: 24px;
   margin: 100px auto;
   margin-top: 200px;
-  /* invisible interior */
   background: transparent;
 
-  /* glass blur */
   backdrop-filter: blur(0px);
   -webkit-backdrop-filter: blur(16px);
 
@@ -58,7 +55,6 @@
   z-index: 1;
 }
 
-/* AURORA BORDER */
 .aurora-glass::before {
   content: "";
   position: absolute;
@@ -75,7 +71,6 @@
   background-size: 300% 300%;
   animation: aurora 6s ease infinite;
 
-  /* border-only trick */
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
@@ -85,7 +80,6 @@
   pointer-events: none;
 }
 
-/* subtle glow */
 .aurora-glass::after {
   content: "";
   position: absolute;
@@ -121,7 +115,6 @@
   justify-content: center;
 }
 
-/* SMALL AURORA BOX */
 .aurora-mini {
   position: relative;
   padding: 12px 22px;
@@ -139,7 +132,6 @@
   z-index: 1;
 }
 
-/* aurora border */
 .aurora-mini::before {
   content: "";
   position: absolute;
@@ -164,7 +156,6 @@
   pointer-events: none;
 }
 
-/* glow */
 .aurora-mini::after {
   content: "";
   position: absolute;
@@ -179,7 +170,6 @@
   z-index: -1;
 }
 
-/* hover effect */
 .aurora-mini:hover {
   transform: translateY(-2px);
   transition: 0.3s ease;
@@ -274,8 +264,6 @@ body::after {
   animation-duration: 2.5s;
   filter: hue-rotate(60deg);
 }
-
-
 
 body {
   min-height: 100vh;
@@ -423,7 +411,6 @@ body {
   box-shadow: 0 10px 30px rgba(0,0,0,0.35);
   color: white;
   font-family: "Segoe UI", sans-serif;
-
 }
 
 .dc-avatar {
@@ -492,7 +479,6 @@ html, body {
   object-fit: cover;
 }
 
-/* optional aesthetic boost */
 .bg-video {
   filter: brightness(0.85);
 }
@@ -516,3 +502,4 @@ html, body {
   cursor: pointer;
   font-family: Inter, sans-serif;
 }
+
