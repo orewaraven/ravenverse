@@ -37,6 +37,6 @@ const video = document.getElementById("bgVideo");
 
 btn.addEventListener("click", () => {
   video.muted = false;
-  video.volume = 0.7; // optional
-  btn.style.display = "none"; // hide button after click
+  btn.style.display = "none";
 });
+
